@@ -6,7 +6,6 @@
   },
   "files.exclude": {
     "dist": true,
-    "node_modules": true
-  },
-  "conventionalCommits.scopes": ["ui"]
+    "node_modules": false
+  }
 }

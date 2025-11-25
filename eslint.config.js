@@ -6,8 +6,9 @@ const angular = require("angular-eslint");
 
 module.exports = defineConfig([
   {
-    ignores: ["**/node_modules/**", "**/dist/**", "**/coverage/**"],
+    ignores: ["**/node_modules/**", "**/dist/**", "**/coverage/**", "**/.storybook/**"],
   },
+
   {
     files: ["**/*.ts"],
     extends: [
@@ -19,25 +20,15 @@ module.exports = defineConfig([
     rules: {
       "@angular-eslint/directive-selector": [
         "error",
-        {
-          type: "attribute",
-          prefix: "app",
-          style: "camelCase",
-        },
+        { type: "attribute", prefix: "app", style: "camelCase" },
       ],
       "@angular-eslint/component-selector": [
         "error",
-        {
-          type: "element",
-          prefix: "app",
-          style: "kebab-case",
-        },
+        { type: "element", prefix: "app", style: "kebab-case" },
       ],
-
-      // (optional) any rule you find too noisy can be turned down here:
-      // "@typescript-eslint/no-explicit-any": "warn",
     },
   },
+
   {
     files: ["**/*.html"],
     extends: [
